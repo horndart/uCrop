@@ -297,7 +297,7 @@ public class OverlayView extends View {
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
-        if (mCropViewRect.isEmpty()) {
+        if (mCropViewRect.isEmpty()/* || mFreestyleCropMode == FREESTYLE_CROP_MODE_DISABLE*/) {
             return false;
         }
 
@@ -418,7 +418,7 @@ public class OverlayView extends View {
             }
         }
 
-        if (mFreestyleCropMode == FREESTYLE_CROP_MODE_ENABLE && closestPointIndex < 0 && mCropViewRect.contains(touchX, touchY)) {
+        if (/*mFreestyleCropMode == FREESTYLE_CROP_MODE_ENABLE && */closestPointIndex < 0 && mCropViewRect.contains(touchX, touchY)) {
             return 4;
         }
 
