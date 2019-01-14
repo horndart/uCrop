@@ -339,6 +339,8 @@ public class SampleActivity extends BaseActivity implements UCropFragmentCallbac
         options.setHideBottomControls(mCheckBoxHideBottomControls.isChecked());
         options.setFreeStyleCropEnabled(mCheckBoxFreeStyleCrop.isChecked());
 
+        options.withCropBoxSize(300, 300);
+
         /*
         If you want to configure how gestures work for all UCropActivity tabs
 

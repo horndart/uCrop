@@ -299,6 +299,10 @@ public class UCrop {
 
         public static final String EXTRA_UCROP_ROOT_VIEW_BACKGROUND_COLOR = EXTRA_PREFIX + ".UcropRootViewBackgroundColor";
 
+        public static final String EXTRA_UCROP_CROP_BOX_WIDTH = EXTRA_PREFIX + ".UcropCropBoxWidth";
+        public static final String EXTRA_UCROP_CROP_BOX_HEIGHT = EXTRA_PREFIX + ".UcropCropBoxHeight";
+
+
 
         private final Bundle mOptionBundle;
 
@@ -556,6 +560,10 @@ public class UCrop {
             mOptionBundle.putInt(EXTRA_MAX_SIZE_Y, height);
         }
 
+        public void withCropBoxSize(@IntRange(from = 0) int width, @IntRange(from = 0) int height){
+            mOptionBundle.putInt(EXTRA_UCROP_CROP_BOX_WIDTH, width);
+            mOptionBundle.putInt(EXTRA_UCROP_CROP_BOX_HEIGHT, height);
+        }
     }
 
 }

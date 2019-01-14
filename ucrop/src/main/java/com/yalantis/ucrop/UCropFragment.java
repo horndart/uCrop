@@ -213,6 +213,8 @@ public class UCropFragment extends Fragment {
         mOverlayView.setCropGridColor(bundle.getInt(UCrop.Options.EXTRA_CROP_GRID_COLOR, getResources().getColor(R.color.ucrop_color_default_crop_grid)));
         mOverlayView.setCropGridStrokeWidth(bundle.getInt(UCrop.Options.EXTRA_CROP_GRID_STROKE_WIDTH, getResources().getDimensionPixelSize(R.dimen.ucrop_default_crop_grid_stoke_width)));
 
+        mOverlayView.setCropBoxSize(bundle.getInt(UCrop.Options.EXTRA_UCROP_CROP_BOX_WIDTH, 0), bundle.getInt(UCrop.Options.EXTRA_UCROP_CROP_BOX_HEIGHT, 0));
+
         // Aspect ratio options
         float aspectRatioX = bundle.getFloat(UCrop.EXTRA_ASPECT_RATIO_X, 0);
         float aspectRatioY = bundle.getFloat(UCrop.EXTRA_ASPECT_RATIO_Y, 0);
