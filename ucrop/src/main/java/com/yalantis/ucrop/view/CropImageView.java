@@ -464,7 +464,7 @@ public class CropImageView extends TransformImageView {
         float widthScale = Math.max(mCropRect.width() / drawableWidth, mCropRect.width() / drawableHeight);
         float heightScale = Math.max(mCropRect.height() / drawableHeight, mCropRect.height() / drawableWidth);
 
-        mMinScale = Math.min(widthScale, heightScale);
+        mMinScale = Math.max(widthScale, heightScale);
         mMaxScale = mMinScale * mMaxScaleMultiplier;
     }
 
